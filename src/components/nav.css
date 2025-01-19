@@ -1,0 +1,26 @@
+.navbar {
+  display: flex; 
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 20px ; 
+  background-color: #faebd7; 
+  position: relative;
+  top: 0;
+
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%;
+}
+
+/* 로그인 버튼 스타일 추가 */
+.login {
+  background-color: #007bff; 
+  color: white; 
+
+  padding: 20px 20px; 
+  
+  border: none; 
+  border-radius: 5px; 
+  
+  cursor: pointer; 
+}
