@@ -7,7 +7,7 @@ const App = () => {
       <Header/>
       <main className="main">
         <div>
-        <h2>레이아웃이다.</h2>
+        <h2>레이아웃이다, 사진 업로드 할 곳</h2>
         </div>
       </main>
       <Footer />

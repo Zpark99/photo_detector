@@ -1,6 +1,9 @@
+import { useState } from 'react';
+import GoogleLoginbutton from "./GoogleLoginbutton";
 import "./nav.css"; 
 
 const Header = () => {
+  const [log, setLog] = useState(false);
   return (
     <header>
       <nav className="navbar">
@@ -8,11 +11,16 @@ const Header = () => {
           <img src="/img/logo.png" alt="logo" />
         </div>
 
-        <button className="login">로그인</button>
+        <button className="login" onClick={() => setLog(!log)}>
+          로그인
+        </button>
+
+        {log && <GoogleLoginbutton />} 
       </nav>
-      <hr/>
     </header>
   )
 }
 
 export default Header
+
+//로그인 버튼 -> 구글 로그인 버튼 구현
