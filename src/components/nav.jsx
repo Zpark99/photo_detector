@@ -8,11 +8,11 @@ const Header = () => {
     <header>
       <nav className="navbar">
         <div> 
-          <img src="/img/logo.png" alt="logo" />
+          <img src="/img/logo" alt="logo" />
         </div>
 
         <button className="login" onClick={() => setLog(!log)}>
-          로그인
+          <img src="/img/Google_Login_Dark" alt="button"></img>구글 계정으로 로그인
         </button>
 
         {log && <GoogleLoginbutton />} 

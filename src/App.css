@@ -1,0 +1,6 @@
+.main{
+  display: flex;
+  border: 2px dashed #ccc; 
+  margin: 20px; 
+  padding: 20px;
+}
