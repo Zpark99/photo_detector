@@ -1,0 +1,25 @@
+.border {
+  position: relative;
+  align-items: center;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  text-align: center;
+  cursor: pointer;
+  margin : 0 auto;
+  width: 50vw;
+  height: 50vh;
+}
+
+.border:hover, .border:active, .border.is-drag-active {
+  border-color: #4CAF50;
+  background-color: #f0fff0; 
+}
+
+.border p {
+  font-size: 16px;
+  color: #666;
+}
+
+.border:hover p, .border.is-drag-active p {
+  color: #4CAF50;
+}
