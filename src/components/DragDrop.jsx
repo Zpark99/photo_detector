@@ -1,12 +1,14 @@
-import { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 import "./DragDrop.css"
+import PropTypes from "prop-types";
 
-const DragDrop = () => {
-  const onDrop = useCallback(acceptedFiles => {
-    console.log(acceptedFiles);
-    }, [])
-    const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
+const DragDrop = ({ onFileDrop }) => {
+  const onDrop = (acceptedFiles) => {
+    onFileDrop(acceptedFiles[0]);
+    };
+
+  const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
+  
   return (
     <div className="border" {...getRootProps()} >
           <input {...getInputProps()} />
@@ -17,6 +19,10 @@ const DragDrop = () => {
           }
         </div>
   );
+};
+
+DragDrop.propTypes = {
+  onFileDrop: PropTypes.object.isRequired, // Adding prop validation for file
 };
 
 export default DragDrop;
